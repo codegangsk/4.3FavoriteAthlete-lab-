@@ -37,6 +37,8 @@ class AthleteFormViewController: UIViewController {
             let team = teamTextField.text else {return}
                
         athlete = Athlete(name: name, age: age, league: league, team: team)
+        
+        performSegue(withIdentifier: "unwindToTable", sender: self)
     }
 }
 
