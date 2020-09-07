@@ -107,7 +107,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Leage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-hH-FNd">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="League" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-hH-FNd">
                                         <rect key="frame" x="0.0" y="88" width="314" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -123,8 +123,7 @@
                                 <rect key="frame" x="190" y="385" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="save:" destination="8K9-2q-IXD" eventType="touchUpInside" id="Oy0-ue-nHN"/>
-                                    <action selector="saveButtonTapped:" destination="8K9-2q-IXD" eventType="touchUpInside" id="hY9-aI-8LA"/>
+                                    <action selector="saveButtonTapped:" destination="8K9-2q-IXD" eventType="touchUpInside" id="ihf-b5-c1U"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,6 +147,7 @@
                         <outlet property="nameTextField" destination="U3J-R0-1jS" id="i3g-Zk-Bee"/>
                         <outlet property="teamTextField" destination="rKE-v9-NBr" id="3kU-b0-MZ8"/>
                         <segue destination="wFc-3q-vwq" kind="unwind" identifier="UnwindToAthleteTable" unwindAction="prepareForUnwindWithSegue:" id="HPS-Df-mzT"/>
+                        <segue destination="wFc-3q-vwq" kind="unwind" identifier="unwindToTable" unwindAction="unwindWithUnwind:" id="Fow-Go-miR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrL-ji-oiy" sceneMemberID="firstResponder"/>

@@ -21,24 +21,22 @@ class AthleteFormViewController: UIViewController {
         updateView()
     }
     
-    @IBAction func save(_ sender: Any) {
+    func updateView() {
+        if let formAthlete = athlete {
+            nameTextField.text = formAthlete.name
+            ageTextField.text = formAthlete.age
+            leagueTextField.text = formAthlete.league
+            teamTextField.text = formAthlete.team
+        }
+    }
+
+    @IBAction func saveButtonTapped(_ sender: Any) {
         guard let name = nameTextField.text,
             let age = ageTextField.text,
             let league = leagueTextField.text,
             let team = teamTextField.text else {return}
-        
+               
         athlete = Athlete(name: name, age: age, league: league, team: team)
     }
-    
-    func updateView() {
-        if let athlete = athlete {
-            nameTextField.text = athlete.name
-            ageTextField.text = athlete.age
-            leagueTextField.text = athlete.league
-            teamTextField.text = athlete.team
-        }
-        
-    }
 }
-
 
